@@ -1,4 +1,5 @@
-class RegisrtationsController < Devise::RegisrtationsController
+class RegistrationsController < Devise::RegistrationsController
+    
 
     private
   
@@ -10,4 +11,4 @@ class RegisrtationsController < Devise::RegisrtationsController
         params.require(:user).perimt(:username, :email, :password_confirmation, :current_password, :age, :gender, :bio)
     end
     
-  end
+end

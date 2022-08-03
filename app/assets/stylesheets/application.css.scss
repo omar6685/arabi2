@@ -23,3 +23,12 @@ body {
     padding-top: 70px;
 
 }
+
+
+.timeline-centered, .card, .jumbotron-fluid, .checkbox, .alert, input, textarea {
+    direction: rtl;
+}
+
+body, dropdown-item {
+    text-align: right;
+}
