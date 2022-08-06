@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20220806170304) do
+ActiveRecord::Schema.define(version: 20220806183218) do
 
   create_table "activities", force: :cascade do |t|
     t.string "trackable_type"
@@ -49,6 +49,16 @@ ActiveRecord::Schema.define(version: 20220806170304) do
   create_table "relationships", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "retweets", force: :cascade do |t|
+    t.integer "retweeter_id"
+    t.integer "source_tweet_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["retweeter_id", "source_tweet_id"], name: "index_retweets_on_retweeter_id_and_source_tweet_id", unique: true
+    t.index ["retweeter_id"], name: "index_retweets_on_retweeter_id"
+    t.index ["source_tweet_id"], name: "index_retweets_on_source_tweet_id"
   end
 
   create_table "tweets", force: :cascade do |t|
