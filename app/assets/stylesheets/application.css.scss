@@ -14,21 +14,30 @@
  *= require_self
  */
 
-
-
-@import "bootstrap";
-
-
-body {
-    padding-top: 70px;
-
-}
-
-
-.timeline-centered, .card, .jumbotron-fluid, .checkbox, .alert, input, textarea {
-    direction: rtl;
-}
-
-body, dropdown-item {
-    text-align: right;
-}
+ @import "bootstrap";
+ @import "jquery.atwho";
+ @import "font-awesome";
+ 
+ body {
+   padding-top: 70px;
+ }
+ 
+ .timeline-centered,
+ .card,
+ .jumbotron-fluid,
+ .checkbox,
+ .alert,
+ input,
+ textarea,
+ a.dropdown-item  {
+   direction: rtl;
+ }
+ 
+ .btn-group {
+   direction: ltr;
+ }
+ 
+ body, .dropdown-item {
+   text-align: right;
+ }
+ 

@@ -26,11 +26,6 @@ class Tweet < ApplicationRecord
 
     def resolve_mentions
         mentions = content_html.scan(/@\w+/)
-
-        # Hello @Ali
-
-        # ["@Ali"]
-
         mentions.uniq.map do |match|
             mention = find_mention(match)
             next unless mention
