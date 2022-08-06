@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Arabi2</title>
+    <title>Arabi</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,11 +9,15 @@
   </head>
 
   <body>
-  <%= render 'layouts/header' %>
+    <%= render 'layouts/header' %>
 
-  <div class="container-fluid">
-    <%= render 'layouts/messages' %>
-    <%= yield %>
-  </div>
+    <div class="container-fluid">
+      <%= render 'layouts/messages' %>
+      <%= yield %>
+    </div>
+
+    <script>
+      $('.timeago').timeago();
+    </script>
   </body>
 </html>
